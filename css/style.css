@@ -1,0 +1,121 @@
+/* Background pagina */
+body {
+    margin: 0;
+    background-image: url('img/Background.jpg');
+
+    background: linear-gradient(135deg, #ff7eb3, #65d6ce);
+    font-family: Quantico,  sans-serif;
+}
+
+/* Fascia centrale */
+.wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0px auto;
+    /* lascia spazio ai bordi */
+    background-color: white;
+    padding: 0 0px 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra menu */
+.topbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 15px 0;
+    margin-top: 0;
+}
+
+/* Elementi menu */
+/* From Uiverse.io by iZOXVL */
+
+:root {
+    --btn-bg: #333333;
+    --btn-border: #2c2c2c;
+    --btn-text: #ffffff;
+    --btn-accent: #6200ff;
+    --btn-hover-bg: #292929;
+}
+
+.boton-spaziale {
+    padding: 15px 30px;
+    border: 2px solid var(--btn-border);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    z-index: 1; /* keep text above overlay */
+}
+
+/* overlay element placed under the text */
+.boton-spaziale .btn-overlay {
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background: radial-gradient(circle, var(--btn-accent), rgba(255,255,255,0) 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.boton-spaziale .btn-label {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+.boton-spaziale:hover .btn-overlay {
+    transform: scale(4);
+}
+
+.boton-spaziale:hover {
+    border-color: #666666;
+    background: var(--btn-hover-bg);
+}
+
+.boton-spaziale.active {
+    border-color: var(--btn-accent);
+}
+
+
+
+/* Area immagine */
+.image {
+    height: 300px;
+    width: auto;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Testo principale */
+.testoMain {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px 0px;
+}
+
+
+.contenuto {
+    padding-bottom: 20px;
+   
+}
+
+.contenuto ul {
+    list-style-type: square;
+    padding-left: 20px;
+}  
+.contenuto ul li {
+    margin-bottom: 10px;
+}
