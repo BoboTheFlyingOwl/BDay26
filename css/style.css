@@ -3,19 +3,21 @@ body {
     margin: 0;
     background-image: url('img/Background.jpg');
 
-    background: linear-gradient(135deg, #ff7eb3, #65d6ce);
+    background: var(--color-bg-gradient-2);
     font-family: Quantico,  sans-serif;
 }
 
 /* Fascia centrale */
 .wrapper {
-    width: 80%;
-    max-width: 1000px;
-    margin: 0px auto;
-    /* lascia spazio ai bordi */
-    background-color: white;
-    padding: 0 0px 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding-bottom: 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+
 }
 
 /* Barra menu */
@@ -27,14 +29,42 @@ body {
     margin-top: 0;
 }
 
+
+#home h1 {
+    font-family: 'Audiowide', sans-serif;
+    /* font futuristico */
+    font-size: 3rem;
+    /* grandezza importante */
+    color: var(--color-DarkAmethyst);
+    /* colore neon azzurro */
+    text-align: center;
+    /* centrato */
+    text-shadow:
+        0 0 5px var(--color-PearlAqua),
+        0 0 10px var(--color-PearlAqua),
+        0 0 20px var(--color-PearlAqua),
+        0 0 40px var(--color-PearlAqua);
+    /* effetto glow spaziale */
+    margin: 30px 0;
+    /* spazio sopra e sotto */
+    letter-spacing: 2px;
+    /* spazio tra lettere */
+}
+
+h2 {
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 2px;
+    color: var(--color-DarkAmethyst);
+    text-shadow: 0 0 10px rgba(0, 224, 255, 0.6);
+}
 /* Elementi menu */
 /* From Uiverse.io by iZOXVL */
 
 :root {
     --btn-bg: #333333;
     --btn-border: #2c2c2c;
-    --btn-text: #ffffff;
-    --btn-accent: #6200ff;
+    --btn-text: var(--color-AlabasterGrey);
+    --btn-accent:var(--color-DarkAmethyst);
     --btn-hover-bg: #292929;
 }
 
@@ -118,4 +148,188 @@ body {
 }  
 .contenuto ul li {
     margin-bottom: 10px;
+}
+
+
+.showImg {
+    width: 45%;
+    max-width: 800px;
+    margin: 30px auto;
+    overflow: hidden;
+    /* NASCONDE le altre immagini */
+    position: relative;
+}
+
+.sliderTrack {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.sliderTrack img {
+    min-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.infoBox {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.infoImg {
+    flex: 0 0 30%;
+}
+
+.infoImg img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.infoList {
+    flex: 0 0 70%;
+}
+
+.infoList ul {
+    list-style: none;
+    padding: 0;
+}
+
+.infoList li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .infoBox {
+        flex-direction: column;
+    }
+
+    .infoImg,
+    .infoList {
+        flex: 100%;
+    }
+}
+
+.mangaGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.mangaCard {
+    background: rgba(53, 29, 75, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mangaCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.mangaCard h3 {
+    margin-bottom: 15px;
+}
+
+.mangaLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mangaLinks a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--color-DarkAmethyst);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.mangaLinks a:hover {
+    background: var(--color-VividOrchid);
+}
+
+.missing {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    background: #ff5252;
+    color: white;
+    font-weight: bold;
+}
+
+.sectionDivider {
+    margin: 60px 0 30px 0;
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.circleContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+    color: var(--color-DarkAmethyst);
+}
+
+.circleContainer .circleLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    /* aumentato dai 14px precedenti */
+    font-weight: bold;
+}
+
+.circleSVG {
+    transform: rotate(-90deg);
+}
+
+.progress {
+    stroke-dasharray: 408;
+    /* 2 * π * 65 (raggio nuovo) */
+    stroke-dashoffset: 408;
+    transition: stroke-dashoffset 0.5s linear;
+}
+
+#countdownBox {
+    background: rgba(0, 0, 0, 0.6);
+    /* sfondo scuro traslucido */
+    border: 3px solid var(--color-PearlAqua);
+    /* cornice luminosa */
+    border-radius: 20px;
+    padding: 30px;
+    display: block;
+    /* blocco per usare margin auto */
+    text-align: center;
+    box-shadow: 0 0 20px var(--color-PearlAqua), 0 0 40px var(--color-PearlAqua) inset;
+    margin: 40px 20px;
+    /* auto = centrato orizzontalmente */
+    /* rimuovi margin-left */
+}
+
+#countdownBox h3 {
+    font-family: 'Audiowide', sans-serif;
+    color: var(--color-DarkAmethyst);
+    text-shadow: 0 0 8px var(--color-PearlAqua), 0 0 15px var(--color-PearlAqua);
+    margin-bottom: 20px;
+}
+
+#countdownCircle {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }

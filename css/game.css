@@ -1,0 +1,142 @@
+.gameContainer {
+    position: relative;
+    width: 800px;
+    margin: 40px auto;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 20px var(--color-shadow);
+}
+
+canvas {
+    background: radial-gradient(circle at center,
+            var(--color-bg-main),
+            #000);
+    display: block;
+}
+
+#gameOver {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--color-primary);
+    font-size: 32px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* ============================= */
+/*           GAME RULES          */
+/* ============================= */
+
+.gameRules {
+    width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--color-shadow);
+    color: var(--color-text-main);
+}
+
+.gameRules h2 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.gameRules h3 {
+    margin-top: 25px;
+    color: var(--color-secondary);
+}
+
+.gameRules ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.gameRules li {
+    margin-bottom: 8px;
+}
+
+.hint {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+/* ============================= */
+/*        BONUS INDICATORS       */
+/* ============================= */
+
+.b-normal,
+.b-rare,
+.b-ultra {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.b-normal {
+    background: var(--color-bonus-normal);
+}
+
+.b-rare {
+    background: var(--color-bonus-rare);
+}
+
+.b-ultra {
+    background: var(--color-bonus-ultra);
+}
+
+/* ============================= */
+/*          SCOREBOARD           */
+/* ============================= */
+
+.scoreboard {
+    width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 0 25px var(--color-shadow);
+}
+
+.scoreboard h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.scoreTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: var(--color-text-main);
+}
+
+.scoreTable th {
+    color: var(--color-secondary);
+    padding: 10px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.scoreTable td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scoreTable tr:hover {
+    background: rgba(0, 224, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* Evidenzia il primo posto */
+.scoreTable tr:first-child td {
+    color: var(--color-accent);
+    font-weight: bold;
+}

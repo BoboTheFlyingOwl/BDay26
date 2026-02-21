@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giochi di Ruolo - Lista 1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="topbar">
+            <button class="boton-spaziale" onclick="window.location.href='../index.html'">
+                <span class="btn-label">Lista 1</span>
+                <span class="btn-overlay" aria-hidden="true"></span>
+            </button>
+            <button class="boton-spaziale" onclick="window.location.href='../index.html'">
+                <span class="btn-label">Lista 2</span>
+                <span class="btn-overlay" aria-hidden="true"></span>
+            </button>
+            <button class="boton-spaziale" onclick="window.location.href='../index.html'">
+                <span class="btn-label">Lista 3</span>
+                <span class="btn-overlay" aria-hidden="true"></span>
+            </button>
+            <button class="boton-spaziale" onclick="window.location.href='../index.html'">
+                <span class="btn-label">Home</span>
+                <span class="btn-overlay" aria-hidden="true"></span>
+            </button>
+        </div>
+    
+
+    <div class="gameContainer">
+        <canvas id="spaceGame" width="800" height="500"></canvas>
+        <div id="gameOver">
+            <div id="finalText"></div>
+            <div style="margin-top:20px;font-size:18px;">Clicca per ricominciare</div>
+        </div>
+    </div>
+    
+
+    <div class="gameRules">
+        <h2>Protocollo di Sopravvivenza</h2>
+    
+        <p>
+            Comandante, la missione è semplice: sopravvivere il più a lungo possibile nello spazio profondo.
+            La tua astronave è rappresentata da un nucleo energetico che segue i movimenti del mouse.
+        </p>
+    
+        <h3>Obiettivo</h3>
+        <ul>
+            <li>Evita gli asteroidi che arrivano da ogni direzione.</li>
+            <li>Raccogli le zone energetiche per ottenere punti bonus.</li>
+            <li>Resisti il più a lungo possibile per aumentare il punteggio.</li>
+        </ul>
+    
+        <h3>Bonus Energetici</h3>
+        <ul>
+            <li><span class="b-normal"></span> Bonus Standard → +3 punti</li>
+            <li><span class="b-rare"></span> Bonus Raro → +5 punti (più piccolo e dura meno)</li>
+            <li><span class="b-ultra"></span> Bonus Ultra → +10 punti (molto raro e instabile)</li>
+        </ul>
+    
+        <h3>Fine Missione</h3>
+        <p>
+            Se un asteroide colpisce la nave, la missione termina.
+            Verrà mostrato il tempo di sopravvivenza, i bonus raccolti e il punteggio totale.
+        </p>
+    
+        <p class="hint">
+            Suggerimento: i bonus più piccoli sono più rischiosi da catturare… ma valgono molto di più.
+        </p>
+    </div>
+
+        <div class="scoreboard">
+            <h2>Classifica Interstellare</h2>
+        
+            <table class="scoreTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Pilota</th>
+                        <th>Punteggio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>NovaPrime</td>
+                        <td>8420</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>StarRider</td>
+                        <td>7910</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>VoidHunter</td>
+                        <td>7350</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>GalacticX</td>
+                        <td>6900</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>AstroZeta</td>
+                        <td>6400</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>CosmoBlade</td>
+                        <td>5980</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>HyperNova</td>
+                        <td>5500</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>DarkOrbit</td>
+                        <td>5030</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>QuantumRay</td>
+                        <td>4600</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>RookiePilot</td>
+                        <td>3900</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+    
+    <script src="../js/asteroidsGame.js"></script>
+    
+</body>
+
+</html>

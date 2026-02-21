@@ -1,0 +1,37 @@
+:root {
+
+    /* ===== COLORI PRINCIPALI ===== */
+    --color-bg-main: #0b0f1a;
+    --color-bg-secondary: #141827;
+    --color-bg-card: #1b1f2f;
+
+    /* ===== COLORI ACCENTO ===== */
+    --color-primary: #00e0ff;
+    --color-secondary: #bb00ff;
+    --color-accent: #ffcc00;
+
+    /* ===== BONUS ===== */
+    --color-bonus-normal: #00ff88;
+    --color-bonus-rare: #bb00ff;
+    --color-bonus-ultra: #ffcc00;
+
+    /* ===== TESTO ===== */
+    --color-text-main: #eaeaea;
+    --color-text-muted: #aaaaaa;
+
+    /* ===== BORDI & EFFETTI ===== */
+    --color-border: rgba(0, 255, 255, 0.2);
+    --color-shadow: rgba(0, 224, 255, 0.4);
+
+    /* ===== Gradienti ===== */
+    --color-bg-gradient-1: linear-gradient(135deg, #ff7eb3, #65d6ce);
+    --color-bg-gradient-2: linear-gradient(135deg, var(--color-VividOrchid), var(--color-PearlAqua));
+
+    /* ===== Colroi ===== */
+    --color-PearlAqua: #78E0DC;
+    --color-VividOrchid: #C04ABC;
+    --color-NeonPink:#F72585;
+    --color-DarkAmethyst: #251351;
+    --color-AlabasterGrey: #E0E0E2;
+
+}
