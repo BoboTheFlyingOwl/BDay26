@@ -248,7 +248,7 @@ h2 {
     padding: 8px 12px;
     border-radius: 6px;
     background: var(--color-DarkAmethyst);
-    color: white;
+    color: var(--color-AlabasterGrey);
     transition: background 0.3s ease;
 }
 
@@ -262,8 +262,8 @@ h2 {
     padding: 5px 10px;
     font-size: 14px;
     border-radius: 20px;
-    background: #ff5252;
-    color: white;
+    background: var(--color-NeonPink);
+    color:var(--color-AlabasterGrey);
     font-weight: bold;
 }
 
